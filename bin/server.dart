@@ -19,7 +19,8 @@ void main(List<String> arguments) async {
   print('Database opened');
 
   // Create server
-  const port = 8081;
+  final port = int.parse(Platform.environment['PORT'] ?? '8081');
+
   final app = Router();
 
   // Create routes
